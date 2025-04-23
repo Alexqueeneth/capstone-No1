@@ -45,10 +45,11 @@ const Login = () => {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
+        width: "100vw",
         background: "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
       }}
     >
-      <Paper elevation={3} sx={{ p: 4, width: "100%", maxWidth: 400 }}>
+      <Paper elevation={3} sx={{ p: 4, width: "100%", maxWidth: "400px" }}>
         <Typography variant="h4" align="center" gutterBottom>
           Login
         </Typography>

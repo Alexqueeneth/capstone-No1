@@ -6,7 +6,7 @@ import RecentPosts from "../components/RecentPost";
 const Dashboard = () => {
   return (
     <Box sx={{ flexGrow: 1, p: 3 }}>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" gutterBottom color="primary">
         Dashboard Overview
       </Typography>
       <Grid container spacing={3}>

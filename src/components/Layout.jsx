@@ -15,6 +15,7 @@ const Layout = () => {
         flexDirection: "column",
         backgroundColor: theme.palette.background.default,
         minHeight: "100vh",
+        width: "100vw",
       }}
     >
       <Navbar />
@@ -23,11 +24,8 @@ const Layout = () => {
         <Box
           component="main"
           sx={{
-            flexGrow: 1,
-            p: 3,
+            flex: 1,
             marginTop: "64px",
-            marginLeft: "240px",
-            width: "calc(100% - 240px)",
             overFlow: "auto",
             position: "relative",
             zindex: 1,

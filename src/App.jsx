@@ -10,6 +10,7 @@ import Signup from "./pages/Signup";
 import Dashboard from "./Pages/Dashboard";
 import Analytics from "./Pages/Analytics";
 import Schedule from "./Pages/schedule";
+import Settings from "./Pages/settings";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/schedule" element={<Schedule />} />
+                <Route path="/settings" element={<Settings />} />
               </Route>
             </Route>
           </Routes>

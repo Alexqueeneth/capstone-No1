@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Drawer,
   List,
@@ -13,16 +13,23 @@ import {
   Settings as SettingsIcon,
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import { useTheme } from "../contexts/ThemeContext";
 
 const Sidebar = () => {
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    console.log(theme.palette.background.default);
+  }, [theme]);
+
   return (
     <Drawer
       variant="permanent"
       sx={{
-        width: 240,
+        width: "15%",
         flexShrink: 0,
         "& .MuiDrawer-paper": {
-          width: 240,
+          width: "15%",
           boxSizing: "border-box",
           position: "fixed",
           top: "64px",
@@ -30,28 +37,33 @@ const Sidebar = () => {
         },
       }}
     >
-      <List>
+      <List
+        style={{
+          backgroundColor: theme.palette.background.default,
+          height: "100%",
+        }}
+      >
         <ListItem button component={Link} to="/">
           <ListItemIcon>
-            <DashboardIcon />
+            <DashboardIcon color="primary" />
           </ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItem>
         <ListItem button component={Link} to="/analytics">
           <ListItemIcon>
-            <AnalyticsIcon />
+            <AnalyticsIcon color="primary" />
           </ListItemIcon>
           <ListItemText primary="Analytics" />
         </ListItem>
         <ListItem button component={Link} to="/schedule">
           <ListItemIcon>
-            <ScheduleIcon />
+            <ScheduleIcon color="primary" />
           </ListItemIcon>
           <ListItemText primary="Schedule Posts" />
         </ListItem>
         <ListItem button component={Link} to="/settings">
           <ListItemIcon>
-            <SettingsIcon />
+            <SettingsIcon color="primary" />
           </ListItemIcon>
           <ListItemText primary="Settings" />
         </ListItem>
